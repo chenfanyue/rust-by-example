@@ -1,0 +1,6 @@
+[workspace]
+members = [
+    "x_library",    # 包含库包
+    "x_binary"      # 包含二进制包
+]
+resolver = "2"
