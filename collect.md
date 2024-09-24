@@ -62,6 +62,18 @@ fn main() {
     let map: HashMap<_, _> = keys.into_iter().zip(values.into_iter()).collect();
 
     println!("{:?}", map); // 输出: {"苹果": 3, "香蕉": 2, "橙子": 5}
+
+    let enumerate: Vec<_> = "foo".chars().enumerate().collect();
+    let zipper: Vec<_> = (0..).zip("foo".chars()).collect();
+
+    assert_eq!((0, 'f'), enumerate[0]);
+    assert_eq!((0, 'f'), zipper[0]);
+
+    assert_eq!((1, 'o'), enumerate[1]);
+    assert_eq!((1, 'o'), zipper[1]);
+
+    assert_eq!((2, 'o'), enumerate[2]);
+    assert_eq!((2, 'o'), zipper[2]);
 }
 ```
 

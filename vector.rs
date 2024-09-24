@@ -5,3 +5,10 @@ fn main() {
 
     println!("{:?}", vec);
 }
+
+fn main() {
+    let v = Vec::from_iter(0..2);
+
+    assert_eq!(vec![0, 1], v);
+    assert_eq!(2, v.len());
+}
